@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% block title %}Login - Image Bot {% endblock %}
-{% load socialaccount %}
 {% block content %}
     <!-- Form Section -->
     <div class="container-login">
@@ -11,12 +10,9 @@
                 <div class="bg-white p-4 rounded-3 shadow text-center">
                     <h2 class="text-dark">Welcome!</h2>
 
-                    
-
-                    <div class="text-dark text-muted">or use your email</div>
                     <form class="form" action="{% url 'login' %}" method="post">
                         {% csrf_token %}
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                        <input type="email" class="form-control mb-3" name="email" id="email" placeholder="Email" required>
                         <input type="password" class="form-control" name="password" id="Password1" placeholder="Password" required>
 
                         <p class="text-dark mt-2">

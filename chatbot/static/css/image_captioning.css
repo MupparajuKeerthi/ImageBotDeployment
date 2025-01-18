@@ -1,0 +1,37 @@
+/* Center the image with a specific size */
+body .container .text-center img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;  /* Set the desired width for the image */
+    height: 300px; /* Set the desired height for the image */
+    object-fit: cover; /* Ensure the image covers the area without distorting */
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Button Style for Image Captioning */
+body .container .btn {
+    display: inline-block; /* Ensure the button is inline */
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: normal;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    text-align: center;
+    width: auto; /* Let the button width adjust automatically based on content */
+    height: 50px; /* Fixed button height */
+    line-height: 20px; /* Vertically center the text */
+}
+
+body .container .btn:hover {
+    background-color: #1d6fa5;
+    transform: translateY(-2px);
+}

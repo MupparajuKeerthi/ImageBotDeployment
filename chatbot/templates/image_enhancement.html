@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Image Enhancement{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/image_enhancement.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="container py-5">
+        <h2 class="text-center mb-4">Image Enhancement</h2>
+        <p class="text-center">Improve the quality of your image by enhancing brightness, contrast, and sharpness.</p>
+        <div class="text-center">
+            <img src="{{ uploaded_image_url }}" alt="Uploaded Image" class="img-fluid mb-4">
+            <form method="POST">
+                {% csrf_token %}
+                <button type="submit" name="enhance" class="btn btn-primary">Enhance Image</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

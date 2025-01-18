@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Similar Images{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/similar_images.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="container py-5">
+        <h2 class="text-center mb-4">Similar Images</h2>
+        <p class="text-center">Find visually similar images from our curated database.</p>
+        <div class="text-center">
+            <img src="{{ uploaded_image_url }}" alt="Uploaded Image" class="img-fluid mb-4">
+            <form method="POST">
+                {% csrf_token %}
+                <button type="submit" name="find_similar" class="btn btn-success">Find Similar Images</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

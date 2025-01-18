@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Visual Question Answer{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/vqa.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <h2 class="text-center mb-4">Visual Question Answering</h2>
+    <p class="text-center">Ask questions about the uploaded image and get accurate answers.</p>
+    <div class="text-center" id="image-section">
+        <img src="{{ uploaded_image_url }}" alt="Uploaded Image" id="uploaded-image" class="img-fluid mb-4">
+    </div>
+    <div id="question-form" class="text-center">
+        <form method="POST" class="d-inline-block">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="question" class="form-label">Enter your question:</label>
+                <input type="text" name="question" id="question" class="form-control" placeholder="E.g., What color is the car?">
+            </div>
+            <button type="submit" class="btn btn-warning">Get Answer</button>
+        </form>
+    </div>
+
+    {% if answer %}
+        <div class="alert alert-success mt-4">
+            <strong>Answer:</strong> {{ answer }}
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

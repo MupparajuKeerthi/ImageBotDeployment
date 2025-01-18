@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Process Image{% endblock %}
+{% block styles %}<link rel="stylesheet" href="{%static 'css/process.css'%}">{% endblock %}
+{% block content %}
+<header>
+    <h1 id="main-header">Welcome to ImageBot</h1>
+</header>
+<main>
+    <section id="image-section">
+        <figure>
+            <img src="your-image-url" id="uploaded-image" alt="Uploaded Image">
+
+            <figcaption>Preview of the uploaded image</figcaption>
+        </figure>
+    </section>
+    <nav>
+        <ul id="action-list">
+            <li><a href="{% url 'image_captioning' %}">Generate Caption</a></li>
+            <li><a href="{% url 'visual_qa' %}">Ask a Question</a></li>
+            <li><a href="{% url 'similar_images' %}">Find Similar Images</a></li>
+            <li><a href="{% url 'image_enhancement' %}">Enhance Image</a></li>
+        </ul>
+    </nav>
+</main>
+<footer id="footer">
+    <p>&copy; 2025 ImageBot. All rights reserved.</p>
+</footer>
+{% endblock %}

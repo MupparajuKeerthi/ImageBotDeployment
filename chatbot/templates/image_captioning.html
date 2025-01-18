@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Image Captioning{% endblock %}
+{% block styles %}<link rel="stylesheet" href="{%static 'css/image_captioning.css'%}">{% endblock %}
+{% block content %}
+<div class="container py-5">
+    <h2 class="text-center mb-4">Image Captioning</h2>
+    <p class="text-center">Generate a detailed description of the uploaded image using advanced AI techniques.</p>
+    <div class="text-center">
+        <img src="{{ uploaded_image_url }}" alt="Uploaded Image" class="img-fluid mb-4" style="max-width: 60%; border: 1px solid #ddd; padding: 10px;">
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit" name="caption" class="btn btn-secondary">Generate Caption</button>
+        </form>
+        {% if caption %}
+            <div class="alert alert-info mt-4">
+                <strong>Caption:</strong> {{ caption }}
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

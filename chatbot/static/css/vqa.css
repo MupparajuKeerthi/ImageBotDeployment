@@ -1,0 +1,90 @@
+/* vqa.css */
+
+/* General Styling for the Main Header */
+#main-header {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #2c3e50; /* Dark gray */
+}
+
+/* Image Section Styling */
+#image-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Image Styling */
+#uploaded-image {
+    width: 400px;  /* Fixed width for the image */
+    height: 300px; /* Fixed height for the image */
+    object-fit: cover; /* Ensures the image is contained without distortion */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Figcaption Styling (if needed for image captions) */
+figcaption {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #34495e; /* Slightly lighter gray */
+    text-align: center;
+}
+
+/* Styling for Form Container */
+#question-form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Input Field Styling */
+#question-form input {
+    width: 100%; /* Full width */
+    max-width: 400px; /* Max width for the input */
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #34495e;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* Button Styling */
+#question-form button {
+    width: 100%;
+    max-width: 400px;
+    background-color: #3498db; /* Blue background */
+    color: #ffffff; /* White text */
+    font-size: 1.1rem;
+    font-weight: normal;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+#question-form button:hover {
+    background-color: #1d6fa5; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Styling for the Answer */
+.alert-success {
+    font-size: 1.1rem;
+    color: #34495e; /* Darker text for better readability */
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ecf0f1; /* Light gray background */
+    padding: 15px;
+    border-radius: 8px;
+}

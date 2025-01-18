@@ -1,0 +1,78 @@
+#main-header {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #2c3e50;
+}
+
+#image-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+#uploaded-image {
+    width: 400px;  /* Set the width of the image */
+    height: 300px; /* Set the height of the image */
+    object-fit: cover; /* Ensures the image covers the defined size without distortion */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+figcaption {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #34495e;
+    text-align: center;
+}
+
+#action-list {
+    display: grid;
+    grid-template-columns: repeat(2, 200px); /* Two columns with fixed width */
+    gap: 30px; /* Space between buttons */
+    justify-content: center; /* Center grid horizontally */
+    align-items: center; /* Align buttons vertically */
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 40px auto; /* Add top and bottom margin */
+}
+
+#action-list li {
+    display: flex;
+    justify-content: center; /* Center button in its grid cell */
+}
+
+#action-list a {
+    display: block;
+    text-align: center;
+    padding: 15px 20px; /* Uniform padding for all buttons */
+    background-color: #3498db; /* Blue background */
+    color: #ffffff; /* White text */
+    font-size: 1.1rem; /* Slightly larger text */
+    font-weight: normal; /* Remove bold font */
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-decoration: none; /* Remove underline */
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    width: 200px; /* Fixed button width */
+    height: 50px; /* Fixed button height */
+    line-height: 20px; /* Vertical alignment of text */
+    white-space: nowrap; /* Ensure text is in a single line */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Display ellipsis if the text overflows */
+}
+
+#action-list a:hover {
+    background-color: #1d6fa5; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #95a5a6;
+}
